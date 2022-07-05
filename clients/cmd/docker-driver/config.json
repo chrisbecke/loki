@@ -29,6 +29,190 @@
             "settable": [
                 "value"
             ]
+        },
+        {
+            "name": "loki-url",
+            "description": "loki-url",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-tls-ca-file",
+            "description": "loki-tls-ca-file",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-tls-cert-file",
+            "description": "loki-tls-cert-file",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-tls-key-file",
+            "description": "loki-tls-key-file",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-tls-server-name",
+            "description": "loki-tls-server-name",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-tls-insecure-skip-verify",
+            "description": "loki-tls-insecure-skip-verify",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-proxy-url",
+            "description": "loki-proxy-url",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-timeout",
+            "description": "loki-timeout",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-batch-wait",
+            "description": "loki-batch-wait",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-batch-size",
+            "description": "loki-batch-size",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-min-backoff",
+            "description": "loki-min-backoff",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-max-backoff",
+            "description": "loki-max-backoff",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-retries",
+            "description": "loki-retries",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-pipeline-stage-file",
+            "description": "loki-pipeline-stage-file",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-pipeline-stages",
+            "description": "loki-pipeline-stages",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-tenant-id",
+            "description": "loki-tenant-id",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "no-file",
+            "description": "no-file",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "keep-file",
+            "description": "keep-file",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "loki-relabel-config",
+            "description": "loki-relabel-config",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "max-size",
+            "description": "max-size",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "max-file",
+            "description": "max-file",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "mode",
+            "description": "mode",
+            "value": "",
+            "settable": [
+                "value"
+            ]
+        },
+        {
+            "name": "max-buffer-size",
+            "description": "max-buffer-size",
+            "value": "",
+            "settable": [
+                "value"
+            ]
         }
     ]
 }

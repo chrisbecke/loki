@@ -67,6 +67,36 @@ const (
 	defaultHostLabelName  = model.LabelName("host")
 )
 
+var envVars = []string{
+	"loki-external-labels",
+	"loki-url",
+	"loki-tls-ca-file",
+	"loki-tls-cert-file",
+	"loki-tls-key-file",
+	"loki-tls-server-name",
+	"loki-tls-insecure-skip-verify",
+	"loki-proxy-url",
+	"loki-timeout",
+	"loki-batch-wait",
+	"loki-batch-size",
+	"loki-min-backoff",
+	"loki-max-backoff",
+	"loki-retries",
+	"loki-pipeline-stage-file",
+	"loki-pipeline-stages",
+	"loki-tenant-id",
+	"no-file",
+	"keep-file",
+	"loki-relabel-config",
+	"labels",
+	"env",
+	"env-regex",
+	"max-size",
+	"max-file",
+	"mode",
+	"max-buffer-size",
+}
+
 var (
 	defaultClientConfig = client.Config{
 		BatchWait: client.BatchWait,
@@ -135,6 +165,8 @@ func validateDriverOpt(loggerInfo logger.Info) error {
 }
 
 func parseConfig(logCtx logger.Info) (*config, error) {
+	readEnvironmentConfig(logCtx)
+
 	if err := validateDriverOpt(logCtx); err != nil {
 		return nil, err
 	}
@@ -391,4 +423,20 @@ func loadConfig(filename string, cfg interface{}) error {
 	}
 
 	return yaml.UnmarshalStrict(buf, cfg)
+}
+
+func readEnvironmentConfig(loggerInfo logger.Info) error {
+	config := loggerInfo.Config
+
+	for _, key := range envVars {
+		_, exists := config[key]
+		if !exists {
+			value, exists := os.LookupEnv(key)
+			if exists && len(value) != 0 {
+				config[key] = value
+			}
+		}
+	}
+
+	return nil
 }
